@@ -61,8 +61,8 @@ document.getElementById("timSoChan").onclick = function () {
 }
 
 document.getElementById("doiCho").onclick = function() {
-    let viTri1 = document.getElementById("viTri1").value;
-    let viTri2 = document.getElementById("viTri2").value;
+    let viTri1 = parseInt(document.getElementById("viTri1").value);
+    let viTri2 = parseInt(document.getElementById("viTri2").value);
 
     if (viTri1 >= 0 && viTri1 < arr.length && viTri2 >= 0 && viTri2 < arr.length) {
         let vitri = arr[viTri1];
@@ -71,10 +71,12 @@ document.getElementById("doiCho").onclick = function() {
     } 
     document.getElementById("ketQua6").innerHTML = `Mảng đã được đổi chỗ: ${arr.join(", ")}`;
 }
+
 document.getElementById("sapXep").onclick=function(){
     let sapXep = arr.sort((a,b)=>a-b)
     document.getElementById("ketQua7").innerHTML=`Mãng đã được sắp xếp: ${sapXep}`
 }
+
 document.getElementById("timSoNguyenTo").onclick = function() {
     let ketQua = -1
     for(let i of arr){
